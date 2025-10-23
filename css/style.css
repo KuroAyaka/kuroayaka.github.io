@@ -54,29 +54,24 @@ header {
   padding: 0 20px;
 }
 
-.TitleMain {
-  font-size: 3.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-shadow:
-    0 0 8px rgba(190, 160, 255, 0.8),
-    0 0 20px rgba(170, 140, 255, 0.6),
-    0 0 45px rgba(160, 120, 255, 0.4);
-  opacity: 0;
-  animation: fadeUp 1.5s ease forwards;
-}
-
-.subtitle {
+.TitleMain{
   font-size: 1.1rem;
   color: rgba(240, 230, 255, 0.8);
   margin-top: 10px;
-  text-shadow: 0 0 6px rgba(180, 150, 255, 0.4);
-  opacity: 0;
-  animation: fadeUp 2s ease forwards;
+  text-shadow: 0 0 6px rgba(180, 150, 255, 1);
+  opacity: 0.0;
+  animation: fadeUp 1.5s forwards;
   animation-delay: 0.3s;
 }
 
-/* 💎 메뉴 버튼 */
+.subtitle{
+  font-size: 0.9rem;
+  color: rgba(240, 230, 255, 0.7);
+  margin-top: 8px;
+  opacity: 0;
+  animation: fadeUp 1.5s forwards;
+  animation-delay: 0.8s;
+}
 .menu-buttons {
   display: flex;
   gap: 30px;
@@ -88,65 +83,12 @@ header {
   animation-delay: 0.8s;
 }
 
-.menu-btn {
-  padding: 15px 40px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(220, 200, 255, 0.2);
-  backdrop-filter: blur(8px);
-  color: #e8ddff;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.35s ease;
-  box-shadow:
-    0 0 8px rgba(150, 120, 255, 0.3),
-    inset 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-.menu-btn:hover {
-  color: #fff;
-  background: rgba(190, 160, 255, 0.25);
-  box-shadow:
-    0 0 15px rgba(180, 140, 255, 0.6),
-    0 0 30px rgba(180, 140, 255, 0.4),
-    inset 0 0 15px rgba(255, 255, 255, 0.08);
-  transform: translateY(-3px);
-}
-
-/* 🌙 푸터 */
-footer {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  color: rgba(230, 220, 255, 0.6);
-  font-size: 0.9rem;
-}
-
-/* ✨ 애니메이션 */
-@keyframes fadeUp {
-  from {
+@keyframes fadeUp{
+  from{
     opacity: 0;
     transform: translateY(25px);
   }
-  to {
+  to{
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 📱 반응형 */
-@media (max-width: 768px) {
-  .TitleMain {
-    font-size: 2.4rem;
-  }
-
-  .menu-btn {
-    padding: 12px 30px;
-    font-size: 1rem;
-  }
-
-  .menu-buttons {
-    gap: 20px;
   }
 }
