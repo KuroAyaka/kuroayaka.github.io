@@ -5,7 +5,8 @@ body {
   color: #e8ddff;
   background-color: #0a0612;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: auto; /* ✅ 세로 스크롤 활성화 */
+  scroll-behavior: smooth; /* 부드러운 스크롤 */
 }
 
 /* 🌌 배경 이미지 */
@@ -16,6 +17,7 @@ body {
   filter: brightness(0.45) saturate(120%) blur(10px);
   transform: scale(1.1);
   z-index: -1;
+  pointer-events: none; /* ✅ 배경이 스크롤 차단하지 않게 */
 }
 
 /* 🌙 헤더 */
@@ -26,12 +28,14 @@ header {
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  background: rgba(10, 10, 20, 0.3);
+  background: rgba(10, 10, 20, 0.35);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(200,180,255,0.25);
   z-index: 10;
+  transition: background 0.3s ease;
 }
 
+/* 헤더 글씨 */
 .logo {
   margin: 0;
 }
@@ -50,23 +54,23 @@ header {
 
 /* 🌸 메인 중앙 콘텐츠 */
 main {
-  padding-top: 120px; /* ✅ 헤더가 fixed라서 추가 */
+  padding-top: 140px; /* ✅ 헤더 높이만큼 여백 */
 }
 
 .main-center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 120px); /* 헤더 높이 고려 */
+  justify-content: flex-start; /* ✅ 위쪽부터 배치 */
+  min-height: auto; /* ✅ height 제한 제거 */
   text-align: center;
-  padding: 0 20px;
+  padding: 180px 20px 100px; /* ✅ 상단·하단 여유 */
 }
 
 /* ✨ 타이틀 */
 .TitleMain {
   font-size: 3.3rem;
-  color: rgba(240, 230, 255, 0.85);
+  color: rgba(240, 230, 255, 0.9);
   margin: 0;
   text-shadow:
     0 0 6px rgba(180, 150, 255, 1),
@@ -125,7 +129,7 @@ main {
   transform: translateY(-3px);
 }
 
-/* ✨ 애니메이션 */
+/* 🌠 애니메이션 */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -140,15 +144,22 @@ main {
 /* 🌙 푸터 */
 footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
   color: rgba(230, 220, 255, 0.6);
   font-size: 0.9rem;
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 1.6s;
 }
 
-/* 📱 반응형 */
+/* 📱 반응형 (모바일) */
 @media (max-width: 768px) {
+  header {
+    padding: 15px 0;
+  }
+
   .TitleMain {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .subtitle {
@@ -163,5 +174,13 @@ footer {
   .menu-btn {
     padding: 12px 28px;
     font-size: 1rem;
+  }
+
+  main {
+    padding-top: 120px;
+  }
+
+  .main-center {
+    padding: 140px 20px 80px;
   }
 }
