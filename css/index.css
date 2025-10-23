@@ -55,7 +55,7 @@ nav a {
   text-decoration: none;
   color: #ccc;
   margin-left: 28px;
-  font-size: 2rem;
+  font-size: 1.1rem;
   transition: color 0.3s, opacity 0.3s;
   white-space: nowrap;
 }
