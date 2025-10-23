@@ -1,0 +1,152 @@
+/* 🌑 전체 기본 설정 */
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+  color: #e8ddff;
+  background-color: #0a0612;
+  overflow: hidden;
+}
+
+/* 🌌 배경 이미지 */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url('/Img/3639729.jpg') center/cover no-repeat;
+  filter: brightness(0.45) saturate(120%) blur(10px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+/* 🌙 헤더 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(10, 10, 20, 0.3);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,180,255,0.25);
+  z-index: 10;
+}
+
+.logo a {
+  color: #cbbaff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: #ffffff;
+}
+
+/* 🌸 메인 중앙 콘텐츠 */
+.main-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.TitleMain {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 8px rgba(190, 160, 255, 0.8),
+    0 0 20px rgba(170, 140, 255, 0.6),
+    0 0 45px rgba(160, 120, 255, 0.4);
+  opacity: 0;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: rgba(240, 230, 255, 0.8);
+  margin-top: 10px;
+  text-shadow: 0 0 6px rgba(180, 150, 255, 0.4);
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* 💎 메뉴 버튼 */
+.menu-buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 2.3s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.menu-btn {
+  padding: 15px 40px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(220, 200, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: #e8ddff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow:
+    0 0 8px rgba(150, 120, 255, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.menu-btn:hover {
+  color: #fff;
+  background: rgba(190, 160, 255, 0.25);
+  box-shadow:
+    0 0 15px rgba(180, 140, 255, 0.6),
+    0 0 30px rgba(180, 140, 255, 0.4),
+    inset 0 0 15px rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+/* 🌙 푸터 */
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: rgba(230, 220, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* ✨ 애니메이션 */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 반응형 */
+@media (max-width: 768px) {
+  .TitleMain {
+    font-size: 2.4rem;
+  }
+
+  .menu-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .menu-buttons {
+    gap: 20px;
+  }
+}
