@@ -129,6 +129,16 @@ main {
   transform: translateY(-3px);
 }
 
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: rgba(230, 220, 255, 0.6);
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 1.6s;
+}
+
 /* 🌠 애니메이션 */
 @keyframes fadeUp {
   from {
@@ -142,15 +152,7 @@ main {
 }
 
 /* 🌙 푸터 */
-footer {
-  text-align: center;
-  padding: 40px 0;
-  color: rgba(230, 220, 255, 0.6);
-  font-size: 0.9rem;
-  opacity: 0;
-  animation: fadeUp 2s ease forwards;
-  animation-delay: 1.6s;
-}
+
 
 /* 📱 반응형 (모바일) */
 @media (max-width: 768px) {
