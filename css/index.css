@@ -11,38 +11,53 @@ body {
   position: fixed;
   inset: 0;
   background: url('/Img/3639729.jpg') center/cover no-repeat;
-  filter: brightness(0.5) saturate(120%) blur(10px);
+  filter: brightness(0.55) saturate(120%) blur(10px);
   transform: scale(1.1);
   z-index: -1;
 }
 
-header{
+/* 🌙 헤더 */
+header {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* 로고 왼쪽, 메뉴 오른쪽 */
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  flex-wrap: wrap; /* ✅ 공간 부족하면 자동 줄바꿈 */
+  padding: 20px 40px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  background: rgba(10, 10, 10, 0.3);
+  background: rgba(10, 10, 10, 0.35);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(200,180,255,0.3);
+  box-sizing: border-box;
 }
 
+/* 로고 */
 .logo a {
   text-decoration: none;
   color: #cbbaff;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 네비게이션 */
+nav {
+  display: flex;
+  flex-wrap: wrap; /* ✅ 공간이 부족할 때 자동 줄바꿈 */
+  justify-content: flex-end;
+  max-width: 100%;
 }
 
 nav a {
   text-decoration: none;
   color: #ccc;
-  margin-left: 25px;
-  font-size: 1rem;
-  transition: color 0.3s , opacity 0.3s;
+  margin-left: 28px;
+  font-size: 2rem;
+  transition: color 0.3s, opacity 0.3s;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -50,13 +65,16 @@ nav a:hover {
   opacity: 0.6;
 }
 
+/* 🌸 메인 */
 main {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-direction: column; /* 👈 가로→세로로 쌓이게 만드는 핵심 */
+  flex-direction: column;
+  padding-top: 100px;
+  box-sizing: border-box;
 }
 
 .TitleMain {
@@ -71,6 +89,7 @@ main {
   margin-bottom: 25px;
 }
 
+/* 버튼 */
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -87,6 +106,7 @@ main {
   box-shadow: 0 0 20px rgba(177,156,255,0.5);
 }
 
+/* 🩵 푸터 */
 footer {
   text-align: center;
   padding: 40px 0;
