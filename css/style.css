@@ -1,6 +1,4 @@
-/* -----------------------------
-🌌 기본 스타일
------------------------------ */
+/* 기본 스타일 */
 body {
   margin: 0;
   font-family: 'Outfit', 'Noto Sans KR', sans-serif;
@@ -10,7 +8,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* 🌌 배경 */
+/* 배경 */
 .bg {
   position: fixed;
   inset: 0;
@@ -21,12 +19,9 @@ body {
   z-index: -1;
 }
 
-/* -----------------------------
-🌙 헤더
------------------------------ */
-/* 🌙 헤더 */
+/* 헤더 */
 header {
-  position: fixed;
+  position: relative;;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,6 +34,7 @@ header {
 }
 
 .logo a {
+  display: flex;
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
@@ -129,3 +125,4 @@ header {
   margin: 0 auto;
   background: rgba(107, 98, 107, 0.146);;
 }
+
