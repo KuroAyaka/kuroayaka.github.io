@@ -4,31 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KuroAyaka Atelier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- 🌌 배경 -->
+<!-- 배경 -->
   <div class="bg"></div>
 
-  <!-- 🌙 헤더 -->
+  <!-- 헤더 -->
   <header>
-    <h1 class="logo"><a href="/index.html">KuroAyaka</a></h1>
+    <h1 class="logo"><a href="#">KuroAyaka</a></h1>
   </header>
 
-  <!-- 🌸 메인 -->
-  <main class="main-center">
+  <!-- 🌠 Hero Section -->
+  <main class="MainCenter">
     <h2 class="TitleMain">KuroAyaka Atelier</h2>
-    <p class="subtitle">3D Artist · Technical Creator · Warudo Node Developer</p>
-
-    <div class="menu-buttons">
-      <a href="/about.html" class="menu-btn">About</a>
-      <a href="/works.html" class="menu-btn">Works</a>
-      <a href="/warudo.html" class="menu-btn">Warudo Nodes</a>
-      <a href="/contact.html" class="menu-btn">Contact</a>
+    <p class="Subtitle">3D Artist · Technical Creator · Warudo Node Developer</p>
+    <div class="MenuButtons">
+      <a href="#" class="menubtn">3DModel</a>
+      <a href="#" class="menubtn">Warudo</a>
+      <a href="#" class="menubtn">WarudoNode</a>
+      <a href="#" class="menubtn">Contact</a>
     </div>
   </main>
+
+  <!-- 🌸 About Section -->
+  <section id="about" class="sectionabout">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-desc">
+      감정을 형태로 표현하는 아티스트, KuroAyaka.<br>
+      Warudo와 Unity를 중심으로 한 기술적 창의력으로<br>
+      세상에 존재하지 않는 세계를 만들어냅니다.
+    </p>
+  </section>
+
+  <!-- 💫 Works Section -->
+  <section id="works" class="sectionworks">
+    <h2 class="section-title">Featured Works</h2>
+    <div class="work-grid">
+      <div class="work-card">
+        <img src="/Img/work1.jpg" alt="Stylized Avatar">
+        <h3>Stylized Avatar “Chiffon”</h3>
+        <p>Substance Painter와 Blender로 완성된 VRChat 대응 아바타.</p>
+      </div>
+      <div class="work-card">
+        <img src="/Img/work2.jpg" alt="Shader Project">
+        <h3>ASE Shader Collection</h3>
+        <p>Amplify Shader Editor를 이용한 감성적 조명 표현.</p>
+      </div>
+      <div class="work-card">
+        <img src="/Img/work3.jpg" alt="Warudo Node">
+        <h3>OBS Control Plugin</h3>
+        <p>OBS WebSocket을 제어하는 Warudo 전용 커스텀 플러그인.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚙️ Warudo Section -->
+  <section id="warudo" class="section warudo">
+    <h2 class="section-title">Warudo Nodes</h2>
+    <p class="section-desc">
+      OBS Control, Float/Int/Bools Change Detector, Language Manager 등<br>
+      Warudo의 기능을 확장하는 다양한 커스텀 노드를 직접 개발했습니다.
+    </p>
+    <a href="/warudo.html" class="more-btn">Explore Nodes →</a>
+  </section>
+
+  <!-- 📬 Contact Section -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-desc">협업, 문의, 프로젝트 제안은 언제든 환영합니다.</p>
+    <a href="mailto:kuroayaka@atelier.com" class="menu-btn">Get in Touch</a>
+  </section>
 
   <!-- 🌙 푸터 -->
   <footer>
